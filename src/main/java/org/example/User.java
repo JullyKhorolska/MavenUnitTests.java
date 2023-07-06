@@ -1,27 +1,24 @@
 package org.example;
 
 public class User {
-    public String name;
-    public int age;
-
-    public User(String name, int age) {
-        this.name = name;
+    String firstName;
+    String secondName;
+    int age;
+    public User(String firstName, String secondName, int age){
+        this.firstName = firstName;
+        this.secondName = secondName;
         this.age = age;
     }
-
-    public String getName() {
-        return name;
-    }
-
     public int getAge() {
         return age;
     }
-
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public String toString(){
+        return "FirstName: " + firstName +
+                "\nSecondName:" + secondName + "\nAge: " + age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public String getFirstName() {
+        return firstName;
     }
 }
